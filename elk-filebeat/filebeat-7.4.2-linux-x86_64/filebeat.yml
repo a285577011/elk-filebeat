@@ -153,9 +153,12 @@ setup.kibana:
 # Configure what output to use when sending the data collected by the beat.
 
 #-------------------------- Elasticsearch output ------------------------------
-#setup.template.name: "filebeat"
-#setup.template.pattern: "191-filebeat*"
+setup.template.name: "191-filebeat"
+setup.template.pattern: "191-filebeat*"
+#索引重命名
+setup.ilm.rollover_alias: "191-filebeat"
 #setup.template.enabled: true
+#重写模板
 setup.template.overwrite: true
 #setup.ilm.enabled: false
 #setup.dashboards.index: "191-filebeat-*"
